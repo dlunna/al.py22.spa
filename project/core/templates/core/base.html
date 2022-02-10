@@ -9,111 +9,118 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
 
   <Xlink rel="stylesheet" href="{% static 'core/fonts/icomoon/style.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/jquery-ui.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/owl.theme.default.min.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/bootstrap-datepicker.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+  <Xlink rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+  <Xlink rel="stylesheet" href="{% static 'core/fonts/flaticon/font/flaticon.css' %}">
+  <Xlink rel="stylesheet" href="{% static 'core/css/aos.css' %}">
 
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'core/vendor/twbs/bootstrap/dist/css/bootstrap.min.css' %}">
-  
-  <link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/jquery-ui.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/owl.theme.default.min.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/bootstrap-datepicker.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-  <link rel="stylesheet" href="{% static 'core/fonts/flaticon/font/flaticon.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'core/vendor/fortawesome/font-awesome/css/all.min.css' %}">
   <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
-
-  <link href="rel="stylesheet {% static 'employee/css/custom_ckeditor.css' %}" ">
+  <link ref="stylesheet" href="{% static 'employee/css/custom_ckeditor.css' %}">
+  
 
 </head>
 
-<body style="background-image: url('{% static 'core/images/uby-yanes-1314421-unsplash.jpg' %}');">
+<body style=" background-image: url('{% static 'core/images/spa-background.jpg' %}');">
 
-  <div class="site-wrap">
+    <div class="site-wrap">
 
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+      <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
         </div>
-      </div>
 
-      <a href="{% url 'root' %}">- HOME -</a>
+        <a href="{% url 'root' %}">- HOME -</a>
 
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
+        <div class="site-mobile-menu-body"></div>
+      </div> <!-- .site-mobile-menu -->
 
 
-    <div class="site-navbar-wrap js-site-navbar bg-white">
+      <div class="site-navbar-wrap js-site-navbar bg-white">
 
-      <div class="container">
-        <div class="site-navbar bg-light">
-          <div class="py-1">
-            <div class="row align-items-center">
-              <div class="col-2">
-                <a href="{% url 'root' %}"><img src="{% static 'core/images/lovely_brand.png'%}" /></a>
-              </div>
-              <div class="col-10">
-                <nav class="site-navigation text-right" role="navigation">
-                  <div class="container">
-                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+        <div class="container">
+          <div class="site-navbar bg-light">
+            <div class="py-1">
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <a href="{% url 'root' %}"><img src="{% static 'core/images/lovely_brand.png'%}" /></a>
+                </div>
+                <div class="col-10">
+                  <nav class="site-navigation text-right" role="navigation">
+                    <div class="container">
+                      <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                          class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+                      </div>
 
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li {% if request.path == "/spa/" %}class="active"{% endif %}> <a href="{% url 'home' %}">Portada</a> </li>
-                      <li {% if request.path == "/paquetes/" %}class="active"{% endif %}> <a href="{#% url 'packages' %#}">Paquetes</a> </li>
-                      <li {% if request.path == "/spa/acercade/" %}class="active"{% endif %}> <a href="{% url 'about' %}">Acerca de</a> </li>
-                      <li {% if request.path == "/servicios/" %}class="active"{% endif %}> <a href="{#% url 'services_home' %#}">Servicios</a> </li>
-                      <li {% if request.path|slice:":6" == "/blog/" %}class="active"{% endif %}> <a href="{#% url 'blog' %#}">Blog</a> </li>
-                      <li {% if request.path == "/contacto/" %}class="active"{% endif %}> <a href="{#% url 'contact' %#}">Contacto</a> </li>
+                      <ul class="site-menu js-clone-nav d-none d-lg-block">
+                        <li {% if request.path == "/spa/" %}class="active" {% endif %}> <a
+                            href="{% url 'home' %}">Portada</a> </li>
+                        <li {% if request.path == "/paquetes/" %}class="active" {% endif %}> <a
+                            href="{#% url 'packages' %#}">Paquetes</a> </li>
+                        <li {% if request.path == "/spa/acercade/" %}class="active" {% endif %}> <a
+                            href="{% url 'about' %}">Acerca de</a> </li>
+                        <li {% if request.path == "/servicios/" %}class="active" {% endif %}> <a
+                            href="{#% url 'services_home' %#}">Servicios</a> </li>
+                        <li {% if request.path|slice:":6" == "/blog/" %}class="active" {% endif %}> <a
+                            href="{#% url 'blog' %#}">Blog</a> </li>
+                        <li {% if request.path == "/contacto/" %}class="active" {% endif %}> <a
+                            href="{#% url 'contact' %#}">Contacto</a> </li>
 
-                      {% if request.path == "/" %}
-                      <li> <a href="admin/">L</a> </li>
-                      {% endif %}
-                    </ul>
+                        {% if request.path == "/" %}
+                        <li> <a href="admin/">L</a> </li>
+                        {% endif %}
+                      </ul>
 
-                  </div>
-                </nav>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    {%block carousel%}{% endblock %}
+      {%block carousel%}{% endblock %}
 
-    {% block content %} {% endblock %}
+      {% block content %} {% endblock %}
 
-    {% if request.path == "/services/" %}
-    <hr />{% endif %}
+      {% if request.path == "/services/" %}
+      <hr />{% endif %}
 
 
-<!--
+      <!--
     {{request.path}}
     Si dejamos esta linea tal cual nos da la ruta en la que nos encontramos
 -->
 
-    {% block legales %} {% endblock %}
+      {% block legales %} {% endblock %}
 
-    <footer class="site-footer">
-      <div class="container">
+      <footer class="site-footer">
+        <div class="container">
 
 
-        <div class="row">
-          <div class="col-md-4">
-            <h3 class="footer-heading mb-4 text-white">Ubicación</h3>
-            <p>Blvd. Nuevo a Santa catarina, pitahayas, plaza Mitika local 6</p>
-            <!--<p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>-->
-          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h3 class="footer-heading mb-4 text-white">Ubicación</h3>
+              <p>Blvd. Nuevo a Santa catarina, pitahayas, plaza Mitika local 6</p>
+              <!--<p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>-->
+            </div>
 
-          <div class="col-md-5 ml-auto">
-            <div class="row">
+            <div class="col-md-5 ml-auto">
+              <div class="row">
 
-              <!--
+                <!--
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                 <ul class="list-unstyled">
@@ -137,89 +144,83 @@
                 </ul>
               </div>
 -->
+              </div>
             </div>
-          </div>
 
 
 
-          <div class="col-md-2">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4 text-white">Redes sociales</h3>
-            </div>
-            <div class="col-md-12">
-              <p>
-                {% if facebook_general %}
+            <div class="col-md-2">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4 text-white">Redes sociales</h3>
+              </div>
+              <div class="col-md-12">
+                <p>
+                  {% if facebook_general %}
                   <a href="{{ facebook_general }}" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                {% endif %}
-                {% if twitter_general %}
+                  {% endif %}
+                  {% if twitter_general %}
                   <a href="{{ twitter_general }}" class="pb-2 pr-2 pl-0"><span class="icon-twitter"></span></a>
-                {% endif %}
-                {% if instagram_general %}
+                  {% endif %}
+                  {% if instagram_general %}
                   <a href="{{ instagram_general }}" class="pb-2 pr-2 pl-0"><span class="icon-instagram"></span></a>
-                {% endif %}
-                {% if youtube_general %}
+                  {% endif %}
+                  {% if youtube_general %}
                   <a href="{{ youtube_general }}" class="pb-2 pr-2 pl-0"><span class="icon-youtube"></span></a>
-                {% endif %}
-                <!--
+                  {% endif %}
+                  <!--
                 <a href="#" class="p-2"><span class="icon-twitter"></span></a>
                 <a href="#" class="p-2"><span class="icon-instagram"></span></a>
                 <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
                 -->
 
-              </p>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy; <script>
-                document.write(new Date().getFullYear());
-              </script> All Rights Reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy; <script>
+                  document.write(new Date().getFullYear());
+                </script> Derechos reservados | Made with <i class="fa-solid fa-heart"></i><i class="icon-heart text-danger"
+                  aria-hidden="true"></i> 
+                
 
-            </p>
-            <p>
-              {#% load pages_extras %#}
-              {#% get_page_list as page_list %#}
-              {#% for page in page_list %#}
+              </p>
+              <p>
+                {#% load pages_extras %#}
+                {#% get_page_list as page_list %#}
+                {#% for page in page_list %#}
                 <a href="{#% url 'page' page.id page.title|slugify %#}">{#{page.title}#}</a>
                 {#% if not forloop.last %#} | {#% endif %#}
-              {#% endfor %#}
-            </p>
+                {#% endfor %#}
+              </p>
+
+            </div>
 
           </div>
-
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <script src="{% static 'core/js/jquery-3.3.1.min.js' %}"></script>
-  <script src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>
-  <script src="{% static 'core/js/jquery-ui.js' %}"></script>
-  <script src="{% static 'core/js/popper.min.js' %}"></script>
-  <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'core/js/jquery.stellar.min.js' %}"></script>
-  <script src="{% static 'core/js/jquery.countdown.min.js' %}"></script>
-  <script src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'core/js/bootstrap-datepicker.min.js' %}"></script>
-  <script src="{% static 'core/js/aos.js' %}"></script>
+    <Xscript src="{% static 'core/js/jquery-3.3.1.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/jquery-ui.js' %}"></script>
+    <Xscript src="{% static 'core/js/popper.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/jquery.stellar.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/jquery.countdown.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/bootstrap-datepicker.min.js' %}"></script>
+    <Xscript src="{% static 'core/js/aos.js' %}"></script>
+    <Xscript src="{% static 'core/js/main.js' %}"></script>
+    <Xscript src="{% static 'core/js/main.js' %}"></script>
 
-  <script src="{% static 'core/js/main.js' %}"></script>
+    <script src="{% static 'core/vendor/twbs/bootstrap/js/dist/carousel.js' %}"></script>
+    <script src="{% static 'core/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js' %}"></script>
 
-
-  <script src="{% static 'core/js/main.js' %}"></script>
-
-
-  <script src="{% static 'core/vendor/twbs/bootstrap/js/dist/carousel.js' %}"></script>
-  <script src="{% static 'core/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js' %}"></script>
-  
-
-  
-
-</body>
+    </body>
 
 </html>

@@ -23,4 +23,5 @@ urlpatterns = [
     path('', core_views.root, name="root"),
     
     path('spa/', include('core.urls')),
+    #path('blog/', include('blog.urls')),
 ]
