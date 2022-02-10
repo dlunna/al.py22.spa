@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twbs/bootstrap": "^5.1",
+        "fortawesome/font-awesome": "^6.0"
+    }
+}
