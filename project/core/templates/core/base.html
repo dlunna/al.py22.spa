@@ -67,7 +67,7 @@
                         <li {% if request.path == "/spa/" %}class="active" {% endif %}> <a
                             href="{% url 'home' %}">Portada</a> </li>
                         <li {% if request.path == "/paquetes/" %}class="active" {% endif %}> <a
-                            href="{#% url 'packages' %#}">Paquetes</a> </li>
+                            href="{% url 'packages' %}">Paquetes</a> </li>
                         <li {% if request.path == "/spa/acercade/" %}class="active" {% endif %}> <a
                             href="{% url 'about' %}">Acerca de</a> </li>
                         <li {% if request.path == "/servicios/" %}class="active" {% endif %}> <a
@@ -113,7 +113,8 @@
           <div class="row">
             <div class="col-md-4">
               <h3 class="footer-heading mb-4 text-white">Ubicación</h3>
-              <p>Blvd. Nuevo a Santa catarina, pitahayas, plaza Mitika local 6</p>
+              <p>Boulevard Santa Catarina, Plaza Mitika local 6. Pitahayas 42082 Pachuca de Soto, México.</p>
+              <p><i class="fa-solid fa-phone"></i> 771 110 1023</p>
               <!--<p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>-->
             </div>
 
