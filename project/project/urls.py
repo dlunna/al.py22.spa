@@ -13,16 +13,27 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.dom.minidom import Document
 from django.contrib import admin
 from django.urls import path, include
 
 from core import views as core_views
 from myapps.packages import views as packages_views
 
+# ** En modo debug no se pueden ver los archivos de la carpeta media
+from django.conf import settings
+
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('adm1n/', admin.site.urls),
     path('', core_views.root, name="root"),
     path('spa/', include('core.urls')),
-    path('paquetes/', packages_views.promotion, name="packages"),
+    path('paquetes/', packages_views.packages, name="packages"),
     #path('blog/', include('blog.urls')),
 ]
+
+
+# **
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

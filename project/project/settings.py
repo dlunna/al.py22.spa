@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'myapps.packages',
+    #'myapps.packages',
+    # configuracion extendida para cambiar el nombre
+    # cambiar en admin de la propia app
+    'myapps.packages.apps.PackagesConfig',
     
 ]
 
@@ -124,3 +128,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media (imagenes que se definen en el modelo)
+# Crear carpeta media (mkdir) en raiz del projecto
+# Y en el modelo definir uploadto
+MEDIA_URL = '/media/'
+# import os
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
