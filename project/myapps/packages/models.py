@@ -11,7 +11,7 @@ class Promotion(models.Model):
     #image = models.ImageField(verbose_name="Imagen")
     image = models.ImageField(verbose_name="Imagen", upload_to="packages_files")
     # Campo opcional para agregar una URL
-    #link = models.URLField(verbose_name="URL", null=True, blank=True)
+    link = models.URLField(verbose_name="URL", null=True, blank=True)
     # Campo para el costo
     #cost = models.DecimalField(verbose_name="Costo", max_digits=10, decimal_places=2, default=0)
 

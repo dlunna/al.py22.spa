@@ -12,4 +12,4 @@ def packages(request):
     projects = Promotion.objects.all()
     # Pasar el parametro en el render como anexo
     # return render(request, "promotion/promotion.html")
-    return render(request, "packages/packages.html", {'projects':projects})
+    return render(request, "packages/packages.html", {'clave':projects})

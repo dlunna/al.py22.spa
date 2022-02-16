@@ -1,0 +1,7 @@
+Este paquete maneja la parte de las promociones
+Al dar clic manda llamar las imagenes que estan en media
+y las muestra en la seccion
+
+Se tiene que instalar Pillow (pip install Pillow)
+Se tiene que registrar tambien en el archivo admin para que sea
+editable desde el panel de administrador.
