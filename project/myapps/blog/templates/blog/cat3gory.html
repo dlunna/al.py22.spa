@@ -1,0 +1,114 @@
+Categorias de morty
+<hr>
+
+
+
+
+
+
+
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block title%}Noticias y novedades{% endblock%}
+
+{% block content %}
+
+
+<div class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h2 class="site-section-heading text-center">Noticias y novedades</h2>
+      </div>
+    </div>
+
+
+<!--
+        {% for post in posts %}
+      <div class="col-md-6 text-left mb-6">
+        <div class="border p-4 text-with-icon">
+          {% if post.image %}<img src="{{post.image.url}}" class="img-fluid" alt="Responsive image"/>{% endif %}
+          <h2 class="h5">{{post.title}}</h2>
+          <p>{{post.content}}</p>
+          <p><em>Fecha de publicación: </em>{{post.published|date:"SHORT_DATE_FORMAT"}}</p>
+            <p><em>Autor:</em> {{post.author}}</p>
+            <p><em>Categoría:</em>
+          {% for category in post.categories.all %}
+            {{category.name}}{%if not forloop.last %},{% endif %}
+          {% endfor %}
+            </p>
+        </div>
+      </div>
+      {% endfor %}
+-->
+
+
+    <!--
+    Este ciclo muestra las categorias
+    -->
+
+
+    {%for allcategoryvar in allcategory %}
+        <a href="{%url 'cat3gory' allcategoryvar.id %}">
+            {{allcategoryvar.name}}
+        </a>
+        {%if not forloop.last %},{% endif %}
+    {% endfor %}
+
+        <br>
+        <br>
+
+
+    <!--
+    Es ciclo ya lista el contenido de las categorias
+    digamos los post
+    -->
+
+    <!--
+    va a buscar a un modelo relacionado
+    con el primer modelo todo
+    "get_post" se define en el modelo
+    como related_name
+    en una relacion
+    -->
+
+    {% for post in category.get_post.all %}
+        <ul>
+            <li>{{post.published|date:"SHORT_DATE_FORMAT"}}</li>
+            <li>{{post.title}}</li>
+            <!--<li>{{post.content|linebreaks}}</li> para hacer saltos de linea -->
+            <li>{{post.content}}</li>
+            <li>{{post.author}}</li>
+            <!--<li>{{post.categories.all}}</li>-->
+            {% for category in post.categories.all %}
+                <a href="{% url 'cat3gory' category.id %}">
+                    {{category.name}}
+                </a>
+                {%if not forloop.last %},{% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor%}
+
+
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
+{% block legales %}
+<p align="center">
+      <small> Icons made by
+        [https://www.flaticon.com/authors/pixelmeetup],
+        [https://www.freepik.com/],
+        [https://www.flaticon.com/authors/good-ware],
+        [https://roundicons.com/],
+        [https://www.flaticon.com/authors/pixel-perfect]
+        from www.flaticon.com</small>
+</p>
+{% endblock %}

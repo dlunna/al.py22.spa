@@ -29,7 +29,7 @@ urlpatterns = [
     path('', core_views.root, name="root"),
     path('spa/', include('core.urls')),
     path('paquetes/', packages_views.packages, name="packages"),
-    #path('blog/', include('blog.urls')),
+    path('notas/', include('myapps.blog.urls')),
 ]
 
 

@@ -5,3 +5,8 @@ y las muestra en la seccion
 Se tiene que instalar Pillow (pip install Pillow)
 Se tiene que registrar tambien en el archivo admin para que sea
 editable desde el panel de administrador.
+
+
+crear la carpeta media para manejar los archivos mkdir
+agregar la configuracion de MEDIA_URL en settings.py
+agregar configuracion de ruta en urls.py, si esta DEBUG para servirlos

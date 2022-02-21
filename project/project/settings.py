@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # configuracion extendida para cambiar el nombre
     # cambiar en admin de la propia app
     'myapps.packages.apps.PackagesConfig',
+    'myapps.blog.apps.BlogConfig',
     
 ]
 

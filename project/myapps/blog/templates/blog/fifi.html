@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block title%}Noticias y novedades{% endblock%}
+
+{% block content %}
+
+
+<div class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h2 class="site-section-heading text-center">Noticias y novedades</h2>
+      </div>
+    </div>
+    <div class="row">
+
+      <p>!!!!--{{objj}}--</p>
+
+      {% for elemento in clave %}
+      <div class="col-md-6 text-left mb-6">
+        <div class="border p-4 text-with-icon">
+          {% if elemento.image %}<img src="{{elemento.image.url}}" class="img-fluid" alt="Responsive image" />{% endif %}
+          <h2 class="h5">{{elemento.title}}</h2>
+          <p>{{elemento.content|safe}}</p>
+          <p><em>Fecha de publicación: </em>{{elemento.published|date:"SHORT_DATE_FORMAT"}}</p>
+          <p><em>Autor:</em> {{elemento.author}}</p>
+          <p><em>Categoría:</em>
+            {#{elemento.categories.all}#}
+            
+          {% for elemento in elemento.categories.all %}
+            <a href="{#%url 'cat3gory' category.id %#}">
+              {{elemento.name}}
+            </a>
+            <!--Si no estamos en la última iteracion muestra la coma-->
+            {% if not forloop.last %},{% endif %}
+          {% endfor %}
+          
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
+{% block legales %}
+{% endblock %}

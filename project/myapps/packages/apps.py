@@ -1,4 +1,4 @@
-from tabnanny import verbose
+#from tabnanny import verbose
 from django.apps import AppConfig
 
 
@@ -8,4 +8,4 @@ class PackagesConfig(AppConfig):
     name = 'myapps.packages'
     # Tambien modificar en settings y
     # cambia el nombre en admon
-    verbose_name='Promocion'
+    verbose_name='Promoción'
