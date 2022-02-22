@@ -1,0 +1,17 @@
+Se usa un procesador de contexto
+se define en el archivo processors
+y tambien en el admin en procesadores
+
+esto es para "generar una variable global"
+
+los nombres de las redes son:
+LINK_FACEBOOK 
+LINK_TWITTER 
+LINK_INSTAGRAM 
+LINK_YOUTUBE 
+LINK_TIKTOK 
+LINK_GMAIL 
+LINK_WHATSAPP 
+LINK_TELEGRAM 
+
+ya estan definidos en el template base en core

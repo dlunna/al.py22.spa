@@ -1,0 +1,8 @@
+Se definen los modelos
+en los modelos esta many to many
+
+Se agrega un nombre al final en el modelo para poder llamarlo desde el template
+
+En la vista se tienen varios ejemplos de como pasar la informacion
+al template (busqueda o filtrado)
+

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # cambiar en admin de la propia app
     'myapps.packages.apps.PackagesConfig',
     'myapps.blog.apps.BlogConfig',
+    'myapps.socialnetworks.apps.SocialNetworksConfig',
     
 ]
 
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'myapps.socialnetworks.processors.SocialNetwork_context',
             ],
         },
     },

@@ -154,21 +154,37 @@
             <div class="col-md-2">
               <div class="col-md-12">
                 <h3 class="footer-heading mb-4 text-white">Redes sociales</h3>
+                
               </div>
               <div class="col-md-12">
                 <p>
-                  {% if facebook_general %}
-                  <a href="{{ facebook_general }}" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+
+                  {% if LINK_FACEBOOK %}
+                  <a href="{{ LINK_FACEBOOK }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-facebook"></i></a>
                   {% endif %}
-                  {% if twitter_general %}
-                  <a href="{{ twitter_general }}" class="pb-2 pr-2 pl-0"><span class="icon-twitter"></span></a>
+                  {% if LINK_TWITTER %}
+                  <a href="{{ LINK_TWITTER }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-twitter"></i></a>
                   {% endif %}
-                  {% if instagram_general %}
-                  <a href="{{ instagram_general }}" class="pb-2 pr-2 pl-0"><span class="icon-instagram"></span></a>
+                  {% if LINK_INSTAGRAM %}
+                  <a href="{{ LINK_INSTAGRAM }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-instagram"></i></a>
                   {% endif %}
-                  {% if youtube_general %}
-                  <a href="{{ youtube_general }}" class="pb-2 pr-2 pl-0"><span class="icon-youtube"></span></a>
+                  {% if LINK_YOUTUBE %}
+                  <a href="{{ LINK_YOUTUBE }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-youtube"></i></a>
                   {% endif %}
+                  {% if LINK_TIKTOK %}
+                  <a href="{{ LINK_TIKTOK }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-tiktok"></i></a>
+                  {% endif %}
+                  {% if LINK_GMAIL %}
+                  <a href="mailto:{{ LINK_GMAIL }}" class="pb-2 pr-2 pl-0"><i class="fa-solid fa-envelope"></i></a>
+                  {% endif %}
+                  {% if LINK_WHATSAPP %}
+                  <a href="https://wa.me/{{ LINK_WHATSAPP }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-whatsapp-square"></i></a>
+                  {% endif %}
+                  {% if LINK_TELEGRAM %}
+                  <a href="https://telegram.me/{{ LINK_TELEGRAM }}" class="pb-2 pr-2 pl-0"><i class="fa-brands fa-telegram"></i></a>
+                  {% endif %}
+
+                  
                   <!--
                 <a href="#" class="p-2"><span class="icon-twitter"></span></a>
                 <a href="#" class="p-2"><span class="icon-instagram"></span></a>
@@ -182,13 +198,10 @@
           <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
               <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy; <script>
                   document.write(new Date().getFullYear());
                 </script> Derechos reservados | Made with <i class="fa-solid fa-heart"></i><i class="icon-heart text-danger"
                   aria-hidden="true"></i> 
-                
-
               </p>
               <p>
                 {#% load pages_extras %#}
