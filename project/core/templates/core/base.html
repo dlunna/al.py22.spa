@@ -72,8 +72,9 @@
                             href="{% url 'about' %}">Acerca de</a> </li>
                         <li {% if request.path == "/servicios/" %}class="active" {% endif %}> <a
                             href="{#% url 'services_home' %#}">Servicios</a> </li>
-                        <li {% if request.path|slice:":6" == "/blog/" %}class="active" {% endif %}> <a
-                            href="{% url 'blog_home' %}">Blog</a> </li>
+                            <!-- SLICE recorta los 6 primeros para comprobar la cadena -->
+                        <li {% if request.path|slice:":7" == "/notas/" %}class="active" {% endif %}> <a
+                            href="{% url 'blog_home' %}">Notas</a> </li>
                         <li {% if request.path == "/contacto/" %}class="active" {% endif %}> <a
                             href="{#% url 'contact' %#}">Contacto</a> </li>
 

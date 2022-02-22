@@ -15,7 +15,7 @@
     </div>
     <div class="row">
 
-      <p>!!!!--{{objj}}--</p>
+
 
       {% for elemento in clave %}
       <div class="col-md-6 text-left mb-6">
@@ -29,7 +29,7 @@
             {#{elemento.categories.all}#}
             
           {% for elemento in elemento.categories.all %}
-            <a href="{#%url 'cat3gory' category.id %#}">
+            <a href="{%url 'blog_category' elemento.id %}">
               {{elemento.name}}
             </a>
             <!--Si no estamos en la última iteracion muestra la coma-->

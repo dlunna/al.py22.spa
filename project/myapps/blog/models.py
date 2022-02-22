@@ -29,7 +29,7 @@ class Post(models.Model):
     #Lo contrario a cascade PROTECT pero debe tener null=True, blank=True
     author = models.ForeignKey (User, verbose_name="Autor", on_delete=models.CASCADE)
     #categories = models.ManyToManyField(Category, verbose_name="Categorias", related_name="get_post")
-    categories = models.ManyToManyField(Category, verbose_name="Categorias")
+    categories = models.ManyToManyField(Category, verbose_name="Categorias", related_name="publicaciones_vinculadas")
 
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")
