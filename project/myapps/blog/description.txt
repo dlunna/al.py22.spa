@@ -1,3 +1,6 @@
+Seccion para colocar links a videos o recetas que puedan ser de interes
+
+
 Se definen los modelos
 en los modelos esta many to many
 

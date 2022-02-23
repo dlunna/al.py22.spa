@@ -1,3 +1,5 @@
+Ligas para las redes sociales que van en el footer
+
 Se usa un procesador de contexto
 se define en el archivo processors
 y tambien en el admin en procesadores

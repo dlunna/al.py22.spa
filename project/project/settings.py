@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'myapps.packages.apps.PackagesConfig',
     'myapps.blog.apps.BlogConfig',
     'myapps.socialnetworks.apps.SocialNetworksConfig',
+    'myapps.webpages.apps.WebpagesConfig',
     
 ]
 

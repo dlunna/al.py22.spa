@@ -1,3 +1,5 @@
+Seccion para paquetes, se en pila (promos, paquete de varios, descuentos)
+
 Este paquete maneja la parte de las promociones
 Al dar clic manda llamar las imagenes que estan en media
 y las muestra en la seccion
