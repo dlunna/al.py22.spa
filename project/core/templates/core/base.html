@@ -204,12 +204,13 @@
                   aria-hidden="true"></i> 
               </p>
               <p>
-                {#% load pages_extras %#}
-                {#% get_page_list as page_list %#}
-                {#% for page in page_list %#}
-                <a href="{#% url 'page' page.id page.title|slugify %#}">{#{page.title}#}</a>
-                {#% if not forloop.last %#} | {#% endif %#}
-                {#% endfor %#}
+                {% load webpages_extras %}
+                {% get_page_list as page_list %}
+                {% for page in page_list %}
+                <!--<a href="{#% url 'page' page.id %#}">{{page.title}}</a>-->
+                <a href="{% url 'page' page.id page.title|slugify %}">{{page.title}}</a>
+                {% if not forloop.last %} | {% endif %}
+                {% endfor %}
               </p>
 
             </div>
@@ -218,20 +219,7 @@
         </div>
       </footer>
     </div>
-
-    <Xscript src="{% static 'core/js/jquery-3.3.1.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/jquery-ui.js' %}"></script>
-    <Xscript src="{% static 'core/js/popper.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/bootstrap.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/owl.carousel.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/jquery.stellar.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/jquery.countdown.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/bootstrap-datepicker.min.js' %}"></script>
-    <Xscript src="{% static 'core/js/aos.js' %}"></script>
-    <Xscript src="{% static 'core/js/main.js' %}"></script>
-    <Xscript src="{% static 'core/js/main.js' %}"></script>
+ 
 
     <script src="{% static 'core/vendor/twbs/bootstrap/js/dist/carousel.js' %}"></script>
     <script src="{% static 'core/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js' %}"></script>

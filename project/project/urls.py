@@ -30,7 +30,7 @@ urlpatterns = [
     path('spa/', include('core.urls')),
     path('paquetes/', packages_views.packages, name="packages"),
     path('notas/', include('myapps.blog.urls')),
-    path('pages/', include('myapps.webpages.urls')),
+    path('page/', include('myapps.webpages.urls')),
 ]
 
 
