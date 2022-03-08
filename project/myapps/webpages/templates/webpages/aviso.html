@@ -1,17 +1,16 @@
-{{page.title}}
+{{llave.title}}
 
 <!--
 Esto es para saltos de linea
 -->
-{{page.content|linebreaks}}
+{#{llave.content|linebreaks}#}
+
+<!-- para que interprete HTML directamente 
+Contenido seguro -->
+{{llave.content|safe}}
 
 
-<!-- para que interprete HTML directamente -->
-{#{page.content|safe}#}
-
-<!--
 <h2>{{user}}</h2>
 {% if user.is_authenticated %}
-    <a href="{#% url 'admin:pages_page_change' page.id %#}">Editar</a>
+    <a href="{% url 'admin:webpages_webpage_change' llave.id %}">Editar</a>
 {% endif %}
--->

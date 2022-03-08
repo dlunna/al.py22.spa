@@ -1,3 +1,10 @@
 Sitios estaticos o relativamente estaticos
 Como el de CEO, aviso de privacidad, cosas así.
 
+se trabajan con un templatetag
+el templatetag manda hacer la consulta a la bd
+devuele un objeto y se trabaja el objeto en las consultas
+
+ademas esta app usa el ckeditor
+añadir ckeditor a las apps
+buscar la página de ckeditor y copiar la configuracion para settingss

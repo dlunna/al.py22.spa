@@ -5,9 +5,9 @@ from .models import WebPage
 
 class WebPageAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
-    #list manda llamar del modelo el orden, por titulo y luego 
-    # x bandera order
-    #list_display = ('title', 'order')
     #list_display = ('title',)
+    #list manda llamar del modelo y ordena por titulo 
+    # y luego por el valor de la bandera
+    list_display = ('title', 'order')
 
 admin.site.register(WebPage, WebPageAdmin)

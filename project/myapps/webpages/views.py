@@ -14,5 +14,5 @@ from .models import WebPage
 
 #se recupera 1 de acuerdo al ID
 def page(request, page_id, page_slug):
-    page = get_object_or_404(WebPage, id=page_id )
-    return render(request, 'webpages/aviso.html', {'page':page})
+    objeto = get_object_or_404(WebPage, id=page_id )
+    return render(request, 'webpages/aviso.html', {'llave':objeto})
